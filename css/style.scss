@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+// -------------------------------------------------- //
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Happy times at the ikob new game plus edition';
+  line-height: 1.25;
+}
+
+$u: 100vw / 21;
+$fs: 1rem;
+
+.ts-small {
+  font-size: $fs / 1.25;
+}
+
+.ts-subtitle {
+  font-size: $fs * 1.5;
+}
+
+.ts-title {
+  font-size: $fs * 4;
+}
+
+h2 {
+  @extend .ts-title;
+}
+
+h3 {
+  @extend .ts-subtitle;
+}
+
+// -------------------------------------------------- //
+
+.grid {
+  width: 100%;
+  padding: $u*2;
+
+  @media (max-width: 640px) {
+    padding: $u;
+  }
+
+  &__item,
+  &__sizer {
+    width: $u*8;
+
+    @media (max-width: 640px) {
+      width: $u*19;
+    }
+  }
+
+  &__item {
+    margin-bottom: $u*2;
+
+    &--double {
+      width: $u*8;
+
+      @media (max-width: 640px) {
+        width: $u*19;
+      }
+    }
+
+    &:nth-of-type(4n+3):not(&--double),
+    &:nth-of-type(4n):not(&--double) {
+      .block {
+        margin-right: $u*3;
+
+        @media (max-width: 640px) {
+          margin-left: $u;
+          margin-right: $u;
+        }
+      }
+    }
+
+    &:nth-of-type(4n+1):not(&--double),
+    &:nth-of-type(4n+2):not(&--double) {
+      .block {
+        margin-left: $u*3;
+
+        @media (max-width: 640px) {
+          margin-left: $u;
+          margin-right: $u;
+        }
+      }
+    }
+  }
+
+  &__gutter {
+    width: $u;
+  }
+}
+
+.block {
+  &__media img {
+    width: 100%;
+  }
+
+  &__text {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
