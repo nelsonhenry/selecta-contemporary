@@ -1,0 +1,13 @@
+img.image-lazy {
+  width: 100%;
+  transition: 1s ease-in;
+  transition-property: opacity;
+
+  &:not(.lazyloaded) {
+    opacity: 0;
+  }
+
+  &.lazyloaded {
+    opacity: 1;
+  }
+}

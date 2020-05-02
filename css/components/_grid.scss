@@ -1,0 +1,74 @@
+.grid {
+  width: 100%;
+  padding: 2rem $u;
+
+  @include media('>=sm') {
+    padding: 2rem $u*2;
+  }
+
+  &__item,
+  &__sizer {
+    width: $u*19;
+
+    @include media('>=sm') {
+      width: $u*8;
+    }
+  }
+
+  &__item {
+    margin-bottom: $u*2;
+
+    &--double {
+      width: $u*19;
+
+      @include media('>=sm') {
+        width: $u*8;
+      }
+    }
+
+    &:nth-of-type(4n+3):not(&--double),
+    &:nth-of-type(4n):not(&--double) {
+      .block {
+        margin-left: $u;
+        margin-right: $u;
+
+        @include media('>=sm') {
+          margin-left: 0;
+          margin-right: $u*3;
+        }
+      }
+    }
+
+    &:nth-of-type(4n+1):not(&--double),
+    &:nth-of-type(4n+2):not(&--double) {
+      .block {
+        margin-left: $u;
+        margin-right: $u;
+
+        @include media('>=sm') {
+          margin-left: $u*3;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__gutter {
+    width: $u;
+  }
+
+  .block {
+    &__media img {
+      width: 100%;
+    }
+
+    &__text {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    &__exhibition {
+      @extend .ts-italic;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+// a:hover,
+// button:hover {
+//   text-decoration: underline;
+// }
+
+.main {
+  background: $bg;
+}
+
+.canvas {
+  position: relative;
+  transition: right $speed ease-out;
+  right: 0;
+}
+
+.btn-icon {
+  &__text {
+    display: none;
+
+    @include media('>=xs') {
+      display: inline-block;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+
+    @include media('>=xs') {
+      display: none;
+    }
+
+    &--open-search {
+      position: relative;
+      transform: translateY(15%) rotate(-45deg);
+      margin-right: 0.25rem;
+    }
+
+    &--send-search {
+      position: relative;
+      transform: rotate(-45deg);
+    }
+
+    &--open-menu {
+      margin-left: 0.25rem;
+    }
+  }
+}

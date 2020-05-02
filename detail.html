@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selecta V2</title>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="detail">
+  <section class="menu" id="menu">
+    <div class="menu__inner">
+      <button class="btn-icon" id="btn--close-menu">
+        <span class="btn-icon__text">Close</span>
+        <span class="btn-icon__icon">✕</span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list nav__list--primary">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Exhibitions</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Submissions</a>
+          </li>
+          <li class="nav__item">
+            <button class="nav__link" id="btn--menu-open-search">Search</button>
+          </li>
+        </ul>
+        <ul class="nav__list nav__list--secondary">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Instagram</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Facebook</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Credits</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Privacy policy</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <section class="searchbox" id="searchbox">
+    <div class="searchbox__btn">
+      <button class="btn-icon" id="btn--close-search">
+        <span class="btn-icon__text">Close</span>
+        <span class="btn-icon__icon">✕</span>
+      </button>
+    </div>
+    <form action="#" class="searchbox__form">
+      <div class="searchbox__input">
+        <input type="text" placeholder="...">
+      </div>
+      <div class="searchbox__btn">
+        <button class="btn-icon" id="btn--send-search" type="submit">
+          <span class="btn-icon__text">Search</span>
+          <span class="btn-icon__icon btn-icon__icon--send-search">⚲</span>
+        </button>
+      </div>
+    </form>
+  </section>
+  <div class="canvas" id="canvas">
+    <header class="header" id="header">
+      <div class="header__title">
+        <h1><a href="#">Selecta contemporary</a></h1>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <button class="nav__link btn-icon" id="btn--open-search">
+              <span class="btn-icon__text">Search</span>
+              <span class="btn-icon__icon btn-icon__icon--open-search">⚲</span>
+            </button>
+          </li>
+          <li class="nav__item">
+            <button class="nav__link btn-icon" id="btn--open-menu">
+              <span class="btn-icon__text">Menu</span>
+              <span class="btn-icon__icon btn-icon__icon--open-menu">☰</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main" id="main">
+      <article class="article">
+        test
+      </article>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/searchbox.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

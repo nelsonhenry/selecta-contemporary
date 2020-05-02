@@ -1,0 +1,62 @@
+.searchbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($bg, 0.75);
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+
+  &--open {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem $u;
+
+    @include media('>=sm') {
+      padding: 1rem $u/2;
+    }
+  }
+
+  &__form {
+    // border: 1px solid;
+    box-shadow: 0 0 2rem $fg-secondary;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    background: $bg;
+  }
+
+  &__input {
+    flex: 1;
+
+    input {
+      width: calc(100% - #{$u*2});
+      padding: 1rem $u;
+
+      @include media('>=sm') {
+        width: calc(100% - #{$u*2});
+        padding: 1rem $u/2;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 1rem $u;
+
+    @include media('>=sm') {
+      padding: 1rem $u/2;
+    }
+  }
+}

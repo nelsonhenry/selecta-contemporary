@@ -1,0 +1,59 @@
+$u: 100vw / 21;
+$fs: 1rem;
+$fg: #000000;
+$fg-secondary: #808080;
+$bg: #ffffff;
+$speed: .25s;
+
+$breakpoints: (xs: 480px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1440px,
+  xxl: 1920px);
+
+.ts-body {
+  font-size: $fs;
+}
+
+.ts-title {
+  font-size: $fs * 2;
+  line-height: 1;
+
+  @include media('>=xs') {
+    font-size: $fs * 2.5;
+  }
+
+  @include media('>=sm') {
+    font-size: $fs * 3;
+  }
+
+  @include media('>=xl') {
+    font-size: $fs * 4;
+  }
+
+  // letter-spacing: 1rem * -0.025 * 4;
+}
+
+.ts-subtitle {
+  font-size: $fs * 1;
+
+  @include media('>=md') {
+    font-size: $fs * 1.5;
+  }
+
+  // letter-spacing: 1rem * -0.025 * 1.5;
+}
+
+.ts-subsubtitle {
+  font-size: $fs * 1;
+  // letter-spacing: 1rem * -0.025 * 1.5;
+}
+
+.ts-small {
+  font-size: $fs / 1.25;
+}
+
+.ts-italic {
+  font-style: italic;
+}

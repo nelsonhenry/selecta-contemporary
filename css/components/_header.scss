@@ -1,0 +1,46 @@
+.header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: $fg;
+  transition: $speed ease;
+  transition-property: opacity color background;
+  // padding: 1rem;
+  padding: 1rem $u;
+
+  @include media('>=sm') {
+    // padding: 1rem 2rem;
+    padding: 1rem $u/2;
+  }
+
+  &--hero {
+    color: $bg;
+  }
+
+  &--active {
+    background: $bg;
+    color: $fg;
+  }
+
+  .nav {
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      display: flex;
+
+      &:not(:last-child):after {
+        content: '\00a0/\00a0';
+      }
+    }
+
+    &__link {
+      display: block;
+    }
+  }
+}

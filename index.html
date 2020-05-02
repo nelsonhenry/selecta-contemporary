@@ -5,138 +5,305 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Selecta V2</title>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
-  <div class="container">
-    <div class="grid">
-      <div class="grid__gutter"></div>
-      <div class="grid__sizer"></div>
-      <div class="grid__item">
-        <div class="block">
-          <a class="block__link" href="#">
-            <div class="block__media">
-              <img
-                src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA118121_1600px.jpg"
-                alt="" />
-            </div>
-            <div class="block__text">
-              <p class="block__date">03.04 — 02.05.2020</p>
-              <h3 class="block__title">
-                <span class="block__exhibition">Other Me</span> by Stefan Gu
-                at 465E, Paris
-              </h3>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="grid__item grid__item--double">
-        <div class="block">
-          <a class="block__link" href="#">
-            <div class="block__media">
-              <img
-                src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                alt="" />
-            </div>
-            <div class="block__text">
-              <p class="block__date">03.04 — 02.05.2020</p>
-              <h3 class="block__title">
-                <span class="block__exhibition">Other Me</span> by Stefan Gu
-                at 465E, Paris
-              </h3>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="grid__item grid__item--double">
-        <div class="block">
-          <a class="block__link" href="#">
-            <div class="block__media">
-              <img
-                src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115897_1600px.jpg" />
-            </div>
-            <div class="block__text">
-              <p class="block__date">03.04 — 02.05.2020</p>
-              <h3 class="block__title">
-                <span class="block__exhibition">RESORT</span> by Angelika Grzegorczyk at Pink Passage, Poznan
-              </h3>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="grid__item">
-        <div class="block">
-          <a class="block__link" href="#">
-            <div class="block__media">
-              <img
-                src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121735_1600px.jpg"
-                alt="" />
-            </div>
-            <div class="block__text">
-              <p class="block__date">03.04 — 02.05.2020</p>
-              <h3 class="block__title">
-                <span class="block__exhibition">Other Me</span> by Stefan Gu
-                at 465E, Paris
-              </h3>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="grid__item">
-        <div class="block">
-          <img src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA119951_1600px.jpg"
-            alt="" />
-        </div>
-      </div>
-      <div class="grid__item grid__item--double">
-        <div class="block">
-          <img src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115897_1600px.jpg"
-            alt="" />
-        </div>
-      </div>
-      <div class="grid__item">
-        <div class="block">
-          <img src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA119951_1600px.jpg"
-            alt="" />
-        </div>
-      </div>
-      <div class="grid__item grid__item--double">
-        <div class="block">
-          <img src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121735_1600px.jpg"
-            alt="" />
-        </div>
-      </div>
-      <div class="grid__item grid__item--double">
-        <div class="block">
-          <img src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-            alt="" />
-        </div>
-      </div>
-      <div class="grid__item">
-        <div class="block">
-          <img src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA118121_1600px.jpg"
-            alt="" />
-        </div>
-      </div>
-      <div class="grid__item">
-        <div class="block">
-          <img src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-            alt="" />
-        </div>
-      </div>
-      <div class="grid__item">
-        <div class="block">
-          <img src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121735_1600px.jpg"
-            alt="" />
-        </div>
-      </div>
+<body class="home">
+  <section class="menu" id="menu">
+    <div class="menu__inner">
+      <button class="btn-icon" id="btn--close-menu">
+        <span class="btn-icon__text">Close</span>
+        <span class="btn-icon__icon">✕</span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list nav__list--primary">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Exhibitions</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Submissions</a>
+          </li>
+          <li class="nav__item">
+            <button class="nav__link" id="btn--menu-open-search">Search</button>
+          </li>
+        </ul>
+        <ul class="nav__list nav__list--secondary">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Instagram</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Facebook</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Credits</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Privacy policy</a>
+          </li>
+        </ul>
+      </nav>
     </div>
+  </section>
+  <div id="close-menu-zone" class="close-menu-zone"></div>
+  <section class="searchbox" id="searchbox">
+    <div class="searchbox__btn">
+      <button class="btn-icon" id="btn--close-search">
+        <span class="btn-icon__text">Close</span>
+        <span class="btn-icon__icon">✕</span>
+      </button>
+    </div>
+    <form action="#" class="searchbox__form">
+      <div class="searchbox__input">
+        <input type="text" placeholder="...">
+      </div>
+      <div class="searchbox__btn">
+        <button class="btn-icon" id="btn--send-search" type="submit">
+          <span class="btn-icon__text">Search</span>
+          <span class="btn-icon__icon btn-icon__icon--send-search">⚲</span>
+        </button>
+      </div>
+    </form>
+  </section>
+  <div class="canvas" id="canvas">
+    <header class="header header--hero" id="header">
+      <div class="header__title">
+        <h1><a href="#">Selecta contemporary</a></h1>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <button class="nav__link btn-icon" id="btn--open-search">
+              <span class="btn-icon__text">Search</span>
+              <span class="btn-icon__icon btn-icon__icon--open-search">⚲</span>
+            </button>
+          </li>
+          <li class="nav__item">
+            <button class="nav__link btn-icon" id="btn--open-menu">
+              <span class="btn-icon__text">Menu</span>
+              <span class="btn-icon__icon btn-icon__icon--open-menu">☰</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero" id="hero">
+      <div class="slider" id="slider-hero">
+        <div class="slider__item">
+          <article class="block">
+            <div class="block__media">
+              <img
+                data-flickity-lazyload="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg"
+                alt="">
+            </div>
+            <div class="block__text">
+              <a href="#" class="block__link">
+                <p class="block__subtitle">
+                  <span class="block__date">03.04 — 02.05.2020</span>
+                </p>
+                <h2 class="block__title">
+                  <span class="block__name">Me and Other Me </span>
+                  <span class="block__location">at Pink Passage, Poznan</span>
+                </h2>
+              </a>
+            </div>
+          </article>
+        </div>
+        <div class="slider__item">
+          <article class="block">
+            <div class="block__media">
+              <img
+                data-flickity-lazyload="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA120243_1600px.jpg"
+                alt="Image">
+            </div>
+            <div class="block__text">
+              <a href="#" class="block__link">
+                <p class="block__subtitle">
+                  <span class="block__date">03.04 — 02.05.2020</span>
+                </p>
+                <h2 class="block__title">
+                  <span class="block__name">it has always been the perfect instrument </span>
+                  <span class="block__location">at Knockdown Center, New York</span>
+                </h2>
+              </a>
+            </div>
+          </article>
+        </div>
+        <div class="slider__item">
+          <article class="block">
+            <div class="block__media">
+              <img
+                data-flickity-lazyload="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA118121_1600px.jpg"
+                alt="Image">
+            </div>
+            <div class="block__text">
+              <a href="#" class="block__link">
+                <p class="block__subtitle">
+                  <span class="block__date">03.04 — 02.05.2020</span>
+                </p>
+                <h2 class="block__title">
+                  <span class="block__name">it has always been the perfect instrument </span>
+                  <span class="block__location">at Knockdown Center, New York</span>
+                </h2>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="slider__nav">
+        <button class="slider__arrow slider__arrow--prev">&lt;</button>&nbsp;
+        <span class="slider__page-active"></span>&nbsp;/&nbsp;
+        <span class="slider__page-count"></span>&nbsp;
+        <button class="slider__arrow slider__arrow--next">&gt;</button>
+      </div>
+    </section>
+    <main class="main" id="main">
+      <section class="grid">
+        <div class="grid__gutter"></div>
+        <div class="grid__sizer"></div>
+        <div class="grid__item">
+          <article class="block">
+            <a class="block__link" href="detail.html">
+              <figure class="block__media">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA118121_1600px.jpg"
+                  alt="" />
+              </figure>
+              <div class="block__text">
+                <p class="block__date">03.04 — 02.05.2020</p>
+                <h3 class="block__title">
+                  <span class="block__exhibition">Other Me</span> by Stefan Gu
+                  at 465E, Paris
+                </h3>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="grid__item grid__item--double">
+          <article class="block">
+            <a class="block__link" href="#">
+              <figure class="block__media">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="" />
+              </figure>
+              <div class="block__text">
+                <p class="block__date">03.04 — 02.05.2020</p>
+                <h3 class="block__title">
+                  <span class="block__exhibition">Other Me</span> by Stefan Gu
+                  at 465E, Paris
+                </h3>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="grid__item grid__item--double">
+          <article class="block">
+            <a class="block__link" href="#">
+              <figure class="block__media">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115897_1600px.jpg" />
+              </figure>
+              <div class="block__text">
+                <p class="block__date">03.04 — 02.05.2020</p>
+                <h3 class="block__title">
+                  <span class="block__exhibition">RESORT</span> by Angelika Grzegorczyk at Pink Passage, Poznan
+                </h3>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="grid__item">
+          <article class="block">
+            <a class="block__link" href="#">
+              <figure class="block__media">
+                <img
+                  src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121735_1600px.jpg"
+                  alt="" />
+              </figure>
+              <div class="block__text">
+                <p class="block__date">03.04 — 02.05.2020</p>
+                <h3 class="block__title">
+                  <span class="block__exhibition">Other Me</span> by Stefan Gu
+                  at 465E, Paris
+                </h3>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="grid__item">
+          <article class="block">
+            <img class="image-lazy lazyload"
+              data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA119951_1600px.jpg"
+              alt="" />
+          </article>
+        </div>
+        <div class="grid__item grid__item--double">
+          <article class="block">
+            <img class="image-lazy lazyload"
+              data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115897_1600px.jpg"
+              alt="" />
+          </article>
+        </div>
+        <div class="grid__item">
+          <article class="block">
+            <img class="image-lazy lazyload"
+              data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA119951_1600px.jpg"
+              alt="" />
+          </article>
+        </div>
+        <div class="grid__item grid__item--double">
+          <article class="block">
+            <img class="image-lazy lazyload"
+              data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121735_1600px.jpg"
+              alt="" />
+          </article>
+        </div>
+        <div class="grid__item grid__item--double">
+          <article class="block">
+            <img class="image-lazy lazyload"
+              data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+              alt="" />
+          </article>
+        </div>
+        <div class="grid__item">
+          <article class="block">
+            <img class="image-lazy lazyload"
+              data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA118121_1600px.jpg"
+              alt="" />
+          </article>
+        </div>
+        <div class="grid__item">
+          <article class="block">
+            <img class="image-lazy lazyload"
+              data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+              alt="" />
+          </article>
+        </div>
+        <div class="grid__item">
+          <article class="block">
+            <img class="image-lazy lazyload"
+              data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121735_1600px.jpg"
+              alt="" />
+          </article>
+        </div>
+      </section>
+    </main>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script> -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/searchbox.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/grid.js"></script>
   <script src="js/main.js"></script>
 </body>
 
