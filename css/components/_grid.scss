@@ -1,6 +1,7 @@
 .grid {
   width: 100%;
   padding: 2rem $u;
+  overflow-x: hidden;
 
   @include media('>=sm') {
     padding: 2rem $u*2;

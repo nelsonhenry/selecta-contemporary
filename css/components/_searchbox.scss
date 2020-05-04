@@ -9,11 +9,6 @@
   opacity: 0;
   pointer-events: none;
 
-  &--open {
-    pointer-events: all;
-    opacity: 1;
-  }
-
   &__btn {
     position: absolute;
     top: 0;
@@ -26,8 +21,6 @@
   }
 
   &__form {
-    // border: 1px solid;
-    box-shadow: 0 0 2rem $fg-secondary;
     width: 50%;
     position: absolute;
     top: 50%;
@@ -36,6 +29,7 @@
     display: flex;
     justify-content: space-between;
     background: $bg;
+    box-shadow: 0 0 2rem $fg-secondary;
   }
 
   &__input {
@@ -59,4 +53,18 @@
       padding: 1rem $u/2;
     }
   }
+
+  &--open {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  // &--dark {
+  //   background: rgba($fg, 0.75);
+  //   color: $bg;
+
+  //   .searchbox__form {
+  //     color: $fg;
+  //   }
+  // }
 }

@@ -1,4 +1,5 @@
 .header {
+  pointer-events: none;
   z-index: 1;
   position: fixed;
   top: 0;
@@ -9,11 +10,10 @@
   color: $fg;
   transition: $speed ease;
   transition-property: opacity color background;
-  // padding: 1rem;
   padding: 1rem $u;
+  // mix-blend-mode: exclusion;
 
   @include media('>=sm') {
-    // padding: 1rem 2rem;
     padding: 1rem $u/2;
   }
 
@@ -26,7 +26,22 @@
     color: $fg;
   }
 
+  // &--dark {
+  //   color: $bg;
+  // }
+
+  // &--dark.header--active {
+  //   background: $fg;
+  //   color: $bg;
+  // }
+
+  &__title,
   .nav {
+    pointer-events: all;
+  }
+
+  .nav {
+
     &__list {
       display: flex;
     }

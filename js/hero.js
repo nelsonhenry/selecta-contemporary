@@ -14,7 +14,8 @@
     document.documentElement.clientWidth ||
     document.body.clientWidth,
     sliderNav = document.querySelector('#hero .slider__nav'),
-    sliderText = document.querySelectorAll('#hero .block__text');
+    sliderText = document.querySelectorAll('#hero .block__text'),
+    throttled = false;
 
   // init
   let flktyHero = new Flickity((sliderEl), {
@@ -49,17 +50,6 @@
   sliderArrowPrev.addEventListener('click', () => flktyHero.previous());
   sliderArrowNext.addEventListener('click', () => flktyHero.next());
 
-  // resize
-  let cachedWidth = w;
-  window.addEventListener('resize', () => {
-    let newWidth = w;
-    if (newWidth !== cachedWidth) {
-      sliderViewport.style.height = '';
-      flktyHero.resize();
-      cachedWidth = newWidth;
-    }
-  });
-
   // resize slider text
   function resizeSliderText() {
     for (let el of sliderText) {
@@ -72,9 +62,24 @@
       }
     }
   }
-
   resizeSliderText();
-  window.addEventListener('resize', () => resizeSliderText());
+
+  // resize
+  let cachedWidth = w;
+  window.addEventListener('resize', () => {
+    if (!throttled) {
+      resizeSliderText();
+      let newWidth = w;
+      if (newWidth !== cachedWidth) {
+        sliderViewport.style.height = '';
+        flktyHero.resize();
+        cachedWidth = newWidth;
+      }
+      throttled = true;
+      setTimeout(() => throttled = false, 250);
+    }
+  });
+
 
   // Fix page vertical scrolling (mobile)
   let

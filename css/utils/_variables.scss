@@ -12,48 +12,131 @@ $breakpoints: (xs: 480px,
   xl: 1440px,
   xxl: 1920px);
 
-.ts-body {
-  font-size: $fs;
-}
-
 .ts-title {
   font-size: $fs * 2;
-  line-height: 1;
+  line-height: 1.25;
 
   @include media('>=xs') {
     font-size: $fs * 2.5;
+    line-height: 1.1875;
   }
 
   @include media('>=sm') {
     font-size: $fs * 3;
+    line-height: 1.125;
   }
 
   @include media('>=xl') {
     font-size: $fs * 4;
   }
-
-  // letter-spacing: 1rem * -0.025 * 4;
 }
 
 .ts-subtitle {
   font-size: $fs * 1;
+  line-height: 1.5;
 
   @include media('>=md') {
     font-size: $fs * 1.5;
+    line-height: 1.25;
   }
-
-  // letter-spacing: 1rem * -0.025 * 1.5;
 }
 
-.ts-subsubtitle {
-  font-size: $fs * 1;
-  // letter-spacing: 1rem * -0.025 * 1.5;
+.ts-body {
+  font-size: $fs * 0.875;
+  line-height: 1.5;
 }
 
 .ts-small {
-  font-size: $fs / 1.25;
+  font-size: $fs * 0.75;
+  line-height: 1.5;
+}
+
+.ts-bold {
+  font-weight: bold;
 }
 
 .ts-italic {
   font-style: italic;
+}
+
+.ts-bodylink {
+  text-decoration: underline;
+  text-decoration-color: lighten($fg, 75%);
+  transition: $speed ease-in;
+  transition-property: text-decoration-color;
+
+  &:hover {
+    text-decoration-color: $fg;
+  }
+}
+
+.body {
+  @extend .ts-body;
+
+  h1,
+  h2 {
+    @extend .ts-title;
+  }
+
+  h3 {
+    @extend .ts-subtitle;
+  }
+
+  // spacing
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  blockquote,
+  details,
+  dl,
+  p,
+  ol,
+  pre,
+  table,
+  ul {
+    margin-bottom: 1rem;
+  }
+
+  li {
+    word-wrap: break-all;
+  }
+
+  li+li {
+    margin-bottom: 0.25rem;
+  }
+
+  li>p {
+    margin-top: 1rem;
+  }
+
+  &>*:first-child {
+    margin-top: 0;
+  }
+
+  &>*:last-child {
+    margin-bottom: 0;
+  }
+
+  // style
+  b,
+  strong {
+    @extend .ts-bold;
+  }
+
+  i,
+  em {
+    @extend .ts-italic;
+  }
+
+  a {
+    @extend .ts-bodylink;
+  }
+
 }

@@ -11,12 +11,14 @@
 @import 'components/hero';
 @import 'components/grid';
 @import 'components/searchbox';
+@import 'components/fancybox';
 
 @import 'templates/home';
+@import 'templates/detail';
 
 html {
   font-size: 20px;
-  // letter-spacing: -0.025em;
+  height: 100%;
 }
 
 body {
@@ -26,11 +28,16 @@ body {
     'Times',
     serif;
   line-height: 1.25;
+  background: $fg;
 }
 
+// ::selection {
+//   background: $fg-secondary;
+//   color: $bg;
+// }
 ::selection {
-  background: $fg-secondary;
-  color: $bg;
+  background: #00FF0080;
+  color: $fg;
 }
 
 ::placeholder {

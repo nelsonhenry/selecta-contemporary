@@ -5,11 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Selecta V2</title>
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body class="detail">
+  <!-- <body class="detail detail--dark"> -->
   <section class="menu" id="menu">
     <div class="menu__inner">
       <button class="btn-icon" id="btn--close-menu">
@@ -48,6 +49,7 @@
       </nav>
     </div>
   </section>
+  <div id="close-menu-zone" class="close-menu-zone"></div>
   <section class="searchbox" id="searchbox">
     <div class="searchbox__btn">
       <button class="btn-icon" id="btn--close-search">
@@ -70,7 +72,7 @@
   <div class="canvas" id="canvas">
     <header class="header" id="header">
       <div class="header__title">
-        <h1><a href="#">Selecta contemporary</a></h1>
+        <h1><a href="index.html">Selecta contemporary</a></h1>
       </div>
       <nav class="nav">
         <ul class="nav__list">
@@ -90,18 +92,357 @@
       </nav>
     </header>
     <main class="main" id="main">
-      <article class="article">
-        test
+      <article class="article" id="article">
+        <div class="article__header" id="article-header">
+          <h3 class="article__title">
+            <span class="article__name">Women’s Work, </span>
+            <span class="article__artist">Group Show </span>
+            <span class="article__location">at L’INCONNUE, Montreal, Canada</span>
+          </h3>
+          <p class="article__date">10.03 — 11.03.1994</p>
+        </div>
+        <div class="article__gallery" id="article-gallery">
+          <div class="thumbs-lg">
+            <figure class="thumbs-lg__image">
+              <a data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-lg__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-lg__image">
+              <a data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-lg__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-lg__image">
+              <a data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-lg__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-lg__image">
+              <a data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-lg__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+          </div>
+          <div class="thumbs-sm">
+            <figure class="thumbs-sm__image">
+              <a class="thumbs-sm__link" data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-sm__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-sm__image">
+              <a class="thumbs-sm__link" data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-sm__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-sm__image">
+              <a class="thumbs-sm__link" data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-sm__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-sm__image">
+              <a class="thumbs-sm__link" data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-sm__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-sm__image">
+              <a class="thumbs-sm__link" data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-sm__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-sm__image">
+              <a class="thumbs-sm__link" data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-sm__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-sm__image">
+              <a class="thumbs-sm__link" data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-sm__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-sm__image">
+              <a class="thumbs-sm__link" data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-sm__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-sm__image">
+              <a class="thumbs-sm__link" data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-sm__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-sm__image">
+              <a class="thumbs-sm__link" data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-sm__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-sm__image">
+              <a class="thumbs-sm__link" data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-sm__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-sm__image">
+              <a class="thumbs-sm__link" data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-sm__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="thumbs-sm__image">
+              <a class="thumbs-sm__link" data-fancybox="article-gallery"
+                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
+                <img class="image-lazy lazyload"
+                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
+                  alt="">
+                <figcaption class="thumbs-sm__caption">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
+                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                </figcaption>
+              </a>
+            </figure>
+          </div>
+        </div>
+        <div class="article__text">
+          <div class="article__body">
+            <p>
+              Anne Low’s women workers could be found on the medieval construction site (2016-2017) emerged from the
+              discovery of an archival illustration of two women laying bricks in the Middle Ages. Weaving is at the
+              foundation of Low’s practice and she ascribes to her work a highly specified approach normally applied to
+              furniture or interior decorating. In the artist’s words “it’s a work that is in the realm of an extremely
+              formal and material methodology (i.e. the woodwork and the hand-dyed and hand-woven wool cloth) that is
+              an
+              armature for the more unknowing aspects of how I think about subjectivity. The bits are mostly garbage
+              and
+              things I picked up around the studio, but they are with silver components that are made like jewelry. The
+              woman as worker, the weaver as worker are things that are always present in my work.” For women workers
+              could
+              be found on the medieval construction site, Low hired a craftsperson to fabricate the wooden component of
+              the
+              work. Her materials include outsourced objects such as pieces of jewelry. The work functions as a shrine,
+              an
+              offering to women and as a recognition of their work. Here the viewer can pause and consider a topic of
+              public
+              interest with an intimate engagement.
+            </p>
+            <p>
+              <a href="#">Luanne Martineau’s Fall Carcade (2019) consists of three parts: a prairie blanket collapsed
+                over
+                a hanger</a>, a
+              diseased and grotesque eye, almost animalistic but still human, and lastly a plate with a quotidian
+              dinner
+              side of sliced carrots and green beans. Commissure, Carol (2019) is composed of three triangular forms
+              structured off a discarded hanger in Martineau’s studio. Commissure is the connective tissue between the
+              two
+              hemispheres of the brain. Two hanger impressions oppose each other in reverse, resembling a moth-like
+              creature. They form an hourglass-shape that connects to the work’s third component via an umbilical-like
+              cord
+              that points like an arrow towards the rest of the work. The banal chain of everyday objects in each work
+              composes a sentence. One object cannot exist without the other, together they create meaning. The artist
+              states “there is humour there for me – to work that hard to get something that stupid!…it’s humorous but
+              at
+              the same time there is simplicity to the appetite and satisfaction it offers.” Unlike the delicate woven
+              fibers of Low’s work, felt is an industrial material achieved through compression that does not require
+              warp
+              or weft. “Felt is a non-precious textile, it didn’t have attributes that feminized it overtly.”
+              Iconically,
+              Robert Morris radicalized the material through his decades long practice. Felt needs to be manipulated by
+              hand. Much like chiseling through marble, it’s laboriously malleable, diverging from the gentrified
+              medium
+              of
+              textiles.
+            </p>
+            <p>
+              Olga Abeleva paints in a theatrical language. Tension builds between two scenes fighting for dominance on
+              the
+              canvas’ two-dimensional plane. Framed to articulate a sense of time and create a scene similar to a strip
+              in
+              a
+              comic book, one person plays numerous characters. A spotlight is shown on a neglected scene of a
+              creature,
+              a
+              bug or chewed gum stuck beneath a desk. In Intruder 2 (2019) a character gazes upward at a figure meeting
+              her
+              lips. Their faces are blurred, making it uncertain if this is imagined or real. A counter divides the
+              scene,
+              an exaggerated shadow of a bug dictating the foreground. One is left wondering who the intruder is here?
+              Is
+              it
+              the mysterious kisser from above, the bug or the protagonist pressing the bell calling for service?
+            </p>
+            <p>
+              My friend Clarice (2019) pictures the novelist and short-story writer Clarice Lispector fast asleep while
+              a
+              diener-like man is hunched over her face applying red to her lips. A spotlight magnifies her witchy
+              green-hued
+              face, a contradiction to her reputation of beauty and glamour. Two scenes are about to meet with flames
+              nearing the edge of Lispector’s bed, a burning cigarette between her fingers. It’s rumoured that
+              Lispector
+              hired a beautician to apply make-up to her face; sometimes the transformation occured while she was in an
+              unconscious state. Lispector was obsessed with maintaining her physical appearance and exposing the
+              abjection
+              of female aging in her writings. Similar to the themes of the madness and the mundane in the modernist
+              writer’s work, the painting forces two separate events to co-exist : the life-altering fire and the banal
+              tasks of daily beauty rituals.In both Abeleva’s and Martineau’s works, humour and the glorification of
+              banal
+              play a central role.
+            </p>
+          </div>
+          <div class="article__credits">
+            # text here
+          </div>
+          <div class="article__website">
+            <em>Website:</em>
+            <a href="#" class="link-external">L’INCONNUE</a>
+          </div>
+          <div class="article__actions">
+            <em>Share:&nbsp;</em>
+            <ul class="action__list">
+              <li class="action__item">
+                <a class="action__link" href="#">Facebook</a>
+              </li>
+              <li class="action__item">
+                <a class="action__link" href="#">Facebook</a>
+              </li>
+              <li class="action__item">
+                <a class="action__link" href="#">Facebook</a>
+              </li>
+            </ul>
+            </p>
+          </div>
+          <div class="article__tags">
+            <em>Tags:&nbsp;</em>
+            <ul class="tag__list">
+              <li class="tag__item">
+                <a class="tag__link" href="#">Lorem</a>
+              </li>
+              <li class="tag__item">
+                <a class="tag__link" href="#">ipsum</a>
+              </li>
+              <li class="tag__item">
+                <a class="tag__link" href="#">Loremazkdoazd</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </article>
     </main>
   </div>
-
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <script src="js/header.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/searchbox.js"></script>
+  <script src="js/article.js"></script>
   <script src="js/main.js"></script>
 </body>
 
