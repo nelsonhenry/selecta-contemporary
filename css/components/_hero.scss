@@ -1,9 +1,21 @@
 .hero {
   height: 100vh;
+  // min-height: 640px;
   width: 100%;
   position: relative;
   background: $fg;
   color: $bg;
+
+  &:after {
+    content: '';
+    background: $fg;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: -1;
+  }
 
   .slider,
   .slider__item {
@@ -13,19 +25,16 @@
 
   .slider__nav {
     @extend .ts-subtitle;
+    @extend .pad;
     position: absolute;
     bottom: 0;
     left: 0;
-    // padding: 1rem 1rem 2rem;
-    padding: 1rem $u 2rem;
+    padding-bottom: 2rem;
 
     @include media('>=sm') {
-      // padding: 2rem;
-      padding: 2rem $u/2;
       right: 0;
       left: auto;
     }
-
   }
 
   .block {
@@ -57,15 +66,14 @@
 
 
     &__text {
+      @extend .pad;
       position: absolute;
       bottom: 0;
       left: 0;
-      // padding: 0 1rem;
-      padding: 0 $u;
+      padding-bottom: 0;
 
       @include media('>=sm') {
-        // padding: 2rem;
-        padding: 2rem $u/2;
+        padding-bottom: 2rem;
       }
     }
 

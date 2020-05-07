@@ -4,7 +4,7 @@
   overflow-x: hidden;
 
   @include media('>=sm') {
-    padding: 2rem $u*2;
+    padding: 4rem $u*2;
   }
 
   &__item,
@@ -59,8 +59,17 @@
   }
 
   .block {
-    &__media img {
+    &__media {
+      background-color: #000;
+      transition: $speed/2 ease-in;
+      transition-property: background-color;
+    }
+
+    img {
       width: 100%;
+      mix-blend-mode: screen;
+      transition: $speed/2 ease-in;
+      transition-property: filter;
     }
 
     &__text {

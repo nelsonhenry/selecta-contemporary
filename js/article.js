@@ -22,17 +22,18 @@
     }
   }
 
-  function showFigcaption() {
-    for (let el of figureImgs) {
-      el.addEventListener('click', function () {
-        this.lastElementChild.classList.toggle('visible');
-      })
-    }
-  }
+  // function showFigcaption() {
+  //   for (let el of figureImgs) {
+  //     el.addEventListener('click', function () {
+  //       this.lastElementChild.classList.toggle('visible');
+  //     })
+  //   }
+  // }
+
+  // showFigcaption();
 
   if (document.body.classList.contains('detail--dark'))
     articleDark();
-  showFigcaption();
 
   // scroll
   // window.addEventListener('scroll', () => didScroll = true);

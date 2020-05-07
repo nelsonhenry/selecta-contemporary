@@ -4,6 +4,7 @@ $fg: #000000;
 $fg-secondary: #808080;
 $bg: #ffffff;
 $speed: .25s;
+$hh: calc(2rem + #{$fs*1.25});
 
 $breakpoints: (xs: 480px,
   sm: 768px,
@@ -11,6 +12,34 @@ $breakpoints: (xs: 480px,
   lg: 1280px,
   xl: 1440px,
   xxl: 1920px);
+
+.pad {
+  padding-top: 1rem;
+  padding-left: $u;
+  padding-right: $u;
+  padding-bottom: 1rem;
+
+  @include media('>=sm') {
+    padding-top: 1rem;
+    padding-left: $u/2;
+    padding-right: $u/2;
+    padding-bottom: 1rem;
+  }
+}
+
+.pad {
+  padding-top: 1rem;
+  padding-left: $u;
+  padding-right: $u;
+  padding-bottom: 1rem;
+
+  @include media('>=sm') {
+    padding-top: 1rem;
+    padding-left: $u/2;
+    padding-right: $u/2;
+    padding-bottom: 1rem;
+  }
+}
 
 .ts-title {
   font-size: $fs * 2;

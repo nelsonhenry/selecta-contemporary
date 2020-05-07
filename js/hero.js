@@ -2,7 +2,9 @@
 
 (() => {
   // var
-  let sliderEl = '#slider-hero',
+  let
+    hero = document.querySelector('#hero'),
+    sliderEl = '#slider-hero',
     sliderSelector = document.querySelector(sliderEl),
     sliderLink = sliderSelector.querySelector('#hero slider__item.is-selected'),
     sliderArrowPrev = document.querySelector('#hero .slider__arrow--prev'),
@@ -13,9 +15,13 @@
     w = window.innerWidth ||
     document.documentElement.clientWidth ||
     document.body.clientWidth,
+    h = window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight,
     sliderNav = document.querySelector('#hero .slider__nav'),
     sliderText = document.querySelectorAll('#hero .block__text'),
-    throttled = false;
+    throttled = false,
+    cachedWidth = w;
 
   // init
   let flktyHero = new Flickity((sliderEl), {
@@ -26,6 +32,8 @@
     lazyLoad: 1,
     groupCells: true,
     wrapAround: true,
+    // autoPlay: 5000,
+    // pauseAutoPlayOnHover: false,
     // imagesLoaded: true,
     on: {
       ready() {
@@ -37,18 +45,14 @@
       change() {
         sliderPageActive.innerHTML = flktyHero.selectedIndex + 1;
       },
-      dragStart() {
-        sliderLink.style.pointerEvents = 'none';
-      },
-      dragEnd() {
-        sliderLink.style.pointerEvents = '';
-      }
+      // dragStart() {
+      //   sliderLink.style.pointerEvents = 'none';
+      // },
+      // dragEnd() {
+      //   sliderLink.style.pointerEvents = '';
+      // }
     }
   });
-
-  // custom nav
-  sliderArrowPrev.addEventListener('click', () => flktyHero.previous());
-  sliderArrowNext.addEventListener('click', () => flktyHero.next());
 
   // resize slider text
   function resizeSliderText() {
@@ -62,10 +66,20 @@
       }
     }
   }
+
+  // hero min-height
+  function heroMinhHeight() {
+    hero.style.minHeight = h + 'px';
+  }
+
+  heroMinhHeight();
   resizeSliderText();
 
+  // custom nav
+  sliderArrowPrev.addEventListener('click', () => flktyHero.previous());
+  sliderArrowNext.addEventListener('click', () => flktyHero.next());
+
   // resize
-  let cachedWidth = w;
   window.addEventListener('resize', () => {
     if (!throttled) {
       resizeSliderText();
@@ -76,10 +90,9 @@
         cachedWidth = newWidth;
       }
       throttled = true;
-      setTimeout(() => throttled = false, 250);
+      setTimeout(() => throttled = false, 40);
     }
   });
-
 
   // Fix page vertical scrolling (mobile)
   let

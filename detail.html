@@ -58,14 +58,16 @@
       </button>
     </div>
     <form action="#" class="searchbox__form">
-      <div class="searchbox__input">
-        <input type="text" placeholder="...">
-      </div>
-      <div class="searchbox__btn">
-        <button class="btn-icon" id="btn--send-search" type="submit">
-          <span class="btn-icon__text">Search</span>
-          <span class="btn-icon__icon btn-icon__icon--send-search">⚲</span>
-        </button>
+      <div class="searchbox__form-inner">
+        <div class="searchbox__input">
+          <input type="text" placeholder="...">
+        </div>
+        <div class="searchbox__submit">
+          <button class="btn-icon" id="btn--submit-search" type="submit">
+            <span class="btn-icon__text">Search</span>
+            <span class="btn-icon__icon btn-icon__icon--submit-search">⚲</span>
+          </button>
+        </div>
       </div>
     </form>
   </section>
@@ -74,238 +76,149 @@
       <div class="header__title">
         <h1><a href="index.html">Selecta contemporary</a></h1>
       </div>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <button class="nav__link btn-icon" id="btn--open-search">
-              <span class="btn-icon__text">Search</span>
-              <span class="btn-icon__icon btn-icon__icon--open-search">⚲</span>
-            </button>
-          </li>
-          <li class="nav__item">
-            <button class="nav__link btn-icon" id="btn--open-menu">
-              <span class="btn-icon__text">Menu</span>
-              <span class="btn-icon__icon btn-icon__icon--open-menu">☰</span>
-            </button>
-          </li>
-        </ul>
+      <nav class="header__nav">
+        <button class="nav__link btn-icon" id="btn--open-search">
+          <span class="btn-icon__text">Search</span>
+          <span class="btn-icon__icon btn-icon__icon--open-search">⚲</span>
+        </button>
+        &nbsp;/&nbsp;
+        <button class="nav__link btn-icon" id="btn--open-menu">
+          <span class="btn-icon__text">Menu</span>
+          <span class="btn-icon__icon btn-icon__icon--open-menu">☰</span>
+        </button>
       </nav>
     </header>
     <main class="main" id="main">
       <article class="article" id="article">
         <div class="article__header" id="article-header">
           <h3 class="article__title">
-            <span class="article__name">Women’s Work, </span>
-            <span class="article__artist">Group Show </span>
-            <span class="article__location">at L’INCONNUE, Montreal, Canada</span>
+            <span class="article__name">(U.F.O.) Unreadable For Others </span>
+            <span class="article__artist">by Botond Keresztesi </span>
+            <span class="article__location">at Future Gallery, Berlin</span>
           </h3>
           <p class="article__date">10.03 — 11.03.1994</p>
         </div>
         <div class="article__gallery" id="article-gallery">
           <div class="thumbs-lg">
             <figure class="thumbs-lg__image">
-              <a data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d01.jpg">
+                <img class="image-lazy lazyload" data-src="images/d01.jpg" alt="">
                 <figcaption class="thumbs-lg__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
             <figure class="thumbs-lg__image">
-              <a data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d02.jpg">
+                <img class="image-lazy lazyload" data-src="images/d02.jpg" alt="">
                 <figcaption class="thumbs-lg__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
             <figure class="thumbs-lg__image">
-              <a data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d03.jpg">
+                <img class="image-lazy lazyload" data-src="images/d03.jpg" alt="">
                 <figcaption class="thumbs-lg__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
             <figure class="thumbs-lg__image">
-              <a data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d04.jpg">
+                <img class="image-lazy lazyload" data-src="images/d04.jpg" alt="">
                 <figcaption class="thumbs-lg__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
           </div>
           <div class="thumbs-sm">
             <figure class="thumbs-sm__image">
-              <a class="thumbs-sm__link" data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d05.jpg">
+                <img class="image-lazy lazyload" data-src="images/d05.jpg" alt="">
                 <figcaption class="thumbs-sm__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
             <figure class="thumbs-sm__image">
-              <a class="thumbs-sm__link" data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d06.jpg">
+                <img class="image-lazy lazyload" data-src="images/d06.jpg" alt="">
                 <figcaption class="thumbs-sm__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
             <figure class="thumbs-sm__image">
-              <a class="thumbs-sm__link" data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA115571_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d07.jpg">
+                <img class="image-lazy lazyload" data-src="images/d07.jpg" alt="">
                 <figcaption class="thumbs-sm__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
             <figure class="thumbs-sm__image">
-              <a class="thumbs-sm__link" data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d08.jpg">
+                <img class="image-lazy lazyload" data-src="images/d08.jpg" alt="">
                 <figcaption class="thumbs-sm__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
             <figure class="thumbs-sm__image">
-              <a class="thumbs-sm__link" data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d09.jpg">
+                <img class="image-lazy lazyload" data-src="images/d09.jpg" alt="">
                 <figcaption class="thumbs-sm__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
             <figure class="thumbs-sm__image">
-              <a class="thumbs-sm__link" data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d10.jpg">
+                <img class="image-lazy lazyload" data-src="images/d10.jpg" alt="">
                 <figcaption class="thumbs-sm__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
             <figure class="thumbs-sm__image">
-              <a class="thumbs-sm__link" data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d11.jpg">
+                <img class="image-lazy lazyload" data-src="images/d11.jpg" alt="">
                 <figcaption class="thumbs-sm__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
             <figure class="thumbs-sm__image">
-              <a class="thumbs-sm__link" data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d12.jpg">
+                <img class="image-lazy lazyload" data-src="images/d12.jpg" alt="">
                 <figcaption class="thumbs-sm__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
             <figure class="thumbs-sm__image">
-              <a class="thumbs-sm__link" data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d13.jpg">
+                <img class="image-lazy lazyload" data-src="images/d13.jpg" alt="">
                 <figcaption class="thumbs-sm__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
             <figure class="thumbs-sm__image">
-              <a class="thumbs-sm__link" data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d14.jpg">
+                <img class="image-lazy lazyload" data-src="images/d14.jpg" alt="">
                 <figcaption class="thumbs-sm__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
             <figure class="thumbs-sm__image">
-              <a class="thumbs-sm__link" data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                  alt="">
+              <a class="thumbs-lg__link" data-fancybox="gallery" href="images/d15.jpg">
+                <img class="image-lazy lazyload" data-src="images/d15.jpg" alt="">
                 <figcaption class="thumbs-sm__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
-                </figcaption>
-              </a>
-            </figure>
-            <figure class="thumbs-sm__image">
-              <a class="thumbs-sm__link" data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                  alt="">
-                <figcaption class="thumbs-sm__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
-                </figcaption>
-              </a>
-            </figure>
-            <figure class="thumbs-sm__image">
-              <a class="thumbs-sm__link" data-fancybox="article-gallery"
-                href="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg">
-                <img class="image-lazy lazyload"
-                  data-src="https://s3-eu-west-1.amazonaws.com/olafureliasson.net/objektimages_final/IMG_MDA121293_1600px.jpg"
-                  alt="">
-                <figcaption class="thumbs-sm__caption">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eius in voluptates incidunt omnis totam
-                  fuga illum doloremque. Autem non libero nam consectetur nihil deserunt iusto eos unde itaque nisi.
+                  Botond Keresztesi, The legend of the true pearl, 2019, Oil and acrylic on canvas, 120 x 100 cm
                 </figcaption>
               </a>
             </figure>
@@ -436,13 +349,14 @@
       </article>
     </main>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <script src="js/header.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/searchbox.js"></script>
   <script src="js/article.js"></script>
+  <script src="js/lightbox.js"></script>
   <script src="js/main.js"></script>
 </body>
 

@@ -14,8 +14,6 @@
     menu.style.right = -menuWidth + 'px';
   }
 
-  resizeMenu();
-
   function openMenu() {
     body.style.overflow = 'hidden';
     canvas.style.right = menuWidth + 'px';
@@ -33,7 +31,10 @@
     closeMenuZone.style.pointerEvents = '';
     header.style.opacity = '';
     menu.style.right = -menuWidth + 'px';
+    menu.classList.remove('menu--open');
   }
+
+  resizeMenu();
 
   btnOpenMenu.addEventListener('click', () => openMenu());
   btnCloseMenu.addEventListener('click', () => closeMenu());
@@ -41,12 +42,6 @@
   closeMenuZone.addEventListener('click', () => {
     if (menu.classList.contains('menu--open')) closeMenu();
   })
-  // window.addEventListener('resize', () => {
-  //   menuWidth = menu.offsetWidth;
-  //   menu.classList.contains('menu--open') ?
-  //     closeMenu() :
-  //     resizeMenu()
-  // });
 
   window.addEventListener('resize', function () {
     menuWidth = menu.offsetWidth;

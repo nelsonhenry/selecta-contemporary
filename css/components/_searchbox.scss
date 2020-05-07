@@ -4,53 +4,48 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba($bg, 0.75);
+  background: rgba($bg, 0.5);
   z-index: 2;
   opacity: 0;
   pointer-events: none;
+  transition: $speed ease-in;
+  transition-property: opacity;
 
   &__btn {
+    @extend .pad;
     position: absolute;
     top: 0;
     right: 0;
-    padding: 1rem $u;
-
-    @include media('>=sm') {
-      padding: 1rem $u/2;
-    }
   }
 
   &__form {
-    width: 50%;
+    @extend .pad;
+    width: 100%;
+    max-width: 70ch;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  &__form-inner {
     display: flex;
     justify-content: space-between;
     background: $bg;
-    box-shadow: 0 0 2rem $fg-secondary;
+    box-shadow: 0 0 4rem rgba($fg, 0.5);
+  }
+
+  &__input input,
+  &__submit button {
+    @extend .pad;
+    height: 100%;
   }
 
   &__input {
     flex: 1;
 
     input {
-      width: calc(100% - #{$u*2});
-      padding: 1rem $u;
-
-      @include media('>=sm') {
-        width: calc(100% - #{$u*2});
-        padding: 1rem $u/2;
-      }
-    }
-  }
-
-  &__btn {
-    padding: 1rem $u;
-
-    @include media('>=sm') {
-      padding: 1rem $u/2;
+      width: 100%;
     }
   }
 
