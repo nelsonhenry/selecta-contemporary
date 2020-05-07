@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => document.body.classList.remove('loading'));
-window.addEventListener('beforeunload', () => document.body.classList.add('loading'))
+document.addEventListener("DOMContentLoaded", () => document.body.classList.add('loaded'));
+window.addEventListener('beforeunload', () => document.body.classList.remove('loaded'))
 
 // (() => {
 //   const colorThief = new ColorThief();
