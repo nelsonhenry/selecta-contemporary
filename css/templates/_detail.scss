@@ -81,6 +81,7 @@
     .thumbs-lg {
       display: flex;
       flex-direction: column;
+      align-items: center;
       margin-bottom: 4rem;
 
       &__link {
@@ -88,9 +89,6 @@
       }
 
       &__image {
-        margin-left: auto;
-        margin-right: auto;
-
         &:not(:last-child) {
           margin-bottom: 4rem;
         }
@@ -115,12 +113,11 @@
       max-width: 70ch;
       margin-left: auto;
       margin-right: auto;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       column-gap: $u;
       row-gap: 4rem;
 
       &__image {
-        grid-column: span 4;
         display: flex;
         align-items: center;
       }

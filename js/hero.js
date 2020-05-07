@@ -1,25 +1,22 @@
-// ----- Init ----- //
-
 (() => {
-  // var
   let
     hero = document.querySelector('#hero'),
     sliderEl = '#slider-hero',
     sliderSelector = document.querySelector(sliderEl),
-    sliderLink = sliderSelector.querySelector('#hero slider__item.is-selected'),
     sliderArrowPrev = document.querySelector('#hero .slider__arrow--prev'),
     sliderArrowNext = document.querySelector('#hero .slider__arrow--next'),
     sliderPageActive = document.querySelector('#hero .slider__page-active'),
     sliderPageCount = document.querySelector('#hero .slider__page-count'),
     sliderViewport = document.querySelector('#hero .flickity-viewport'),
+    sliderLink = document.querySelectorAll('#hero .block__link'),
+    sliderNav = document.querySelector('#hero .slider__nav'),
+    sliderText = document.querySelectorAll('#hero .block__text'),
     w = window.innerWidth ||
     document.documentElement.clientWidth ||
     document.body.clientWidth,
     h = window.innerHeight ||
     document.documentElement.clientHeight ||
     document.body.clientHeight,
-    sliderNav = document.querySelector('#hero .slider__nav'),
-    sliderText = document.querySelectorAll('#hero .block__text'),
     throttled = false,
     cachedWidth = w;
 
@@ -32,9 +29,6 @@
     lazyLoad: 1,
     groupCells: true,
     wrapAround: true,
-    // autoPlay: 5000,
-    // pauseAutoPlayOnHover: false,
-    // imagesLoaded: true,
     on: {
       ready() {
         setTimeout(() => {
@@ -45,12 +39,14 @@
       change() {
         sliderPageActive.innerHTML = flktyHero.selectedIndex + 1;
       },
-      // dragStart() {
-      //   sliderLink.style.pointerEvents = 'none';
-      // },
-      // dragEnd() {
-      //   sliderLink.style.pointerEvents = '';
-      // }
+      dragStart() {
+        for (el of sliderLink)
+          el.style.pointerEvents = 'none';
+      },
+      dragEnd() {
+        for (el of sliderLink)
+          el.style.pointerEvents = '';
+      }
     }
   });
 
@@ -107,30 +103,3 @@
     };
   }
 })()
-
-
-
-
-
-
-// ----- Custom nav disable //
-
-// function disableArrows() {
-//   let flktyHeroPrev = document.querySelector('#slider-hero .flickity-prev-next-button.previous');
-//   let flktyHeroNext = document.querySelector('#slider-hero .flickity-prev-next-button.next');
-//   sliderArrowPrev.classList.remove('disabled');
-//   sliderArrowNext.classList.remove('disabled');
-//   if (flktyHeroPrev.disabled) {
-//     sliderArrowPrev.classList.add('disabled');
-//   }
-//   if (flktyHeroNext.disabled) {
-//     sliderArrowNext.classList.add('disabled');
-//   }
-
-//   if (flktyHeroPrev.disabled && flktyHeroNext.disabled) {
-//     sliderArrowPrev.classList.add('disabled');
-//     sliderArrowNext.classList.add('disabled');
-//   }
-// }
-
-// disableArrows()

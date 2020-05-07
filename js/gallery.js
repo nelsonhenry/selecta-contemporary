@@ -5,7 +5,6 @@
       let
         vibrant = new Vibrant(img),
         c;
-      // console.log(vibrant);
 
       if (typeof vibrant.VibrantSwatch !== 'undefined') {
         c = vibrant.VibrantSwatch.rgb
@@ -24,12 +23,11 @@
       img.style.mixBlendMode = 'screen';
       img.style.filter = 'grayscale(1)';
       img.parentElement.style.backgroundColor = `rgb(${c[0]}, ${c[1]}, ${c[2]})`;
-      // img.parentElement.nextElementSibling.style.color = `rgb(${c[0]}, ${c[1]}, ${c[2]})`;
     });
+
     img.addEventListener('mouseleave', () => {
       img.style = '';
       img.parentElement.style = '';
-      // img.parentElement.nextElementSibling.style = '';
     })
   }
 })()
