@@ -34,6 +34,10 @@
     menu.classList.remove('menu--open');
   }
 
+  function resizeMenu() {
+    menu.style.left = w + 'px';
+  }
+
   btnOpenMenu.addEventListener('click', () => openMenu());
   btnCloseMenu.addEventListener('click', () => closeMenu());
   for (let el of navLinks) el.addEventListener('click', () => closeMenu());
@@ -42,6 +46,9 @@
   })
 
   window.addEventListener('resize', function () {
+    w = window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
     menuWidth = menu.offsetWidth;
     menu.classList.contains('menu--open') ?
       closeMenu() :
