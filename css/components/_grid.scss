@@ -1,11 +1,11 @@
 .grid {
   width: 100%;
-  padding: 2rem $u;
   overflow-x: hidden;
 
-  @include media('>=sm') {
-    padding: 4rem $u*2;
-  }
+  // padding: 2rem $u;
+  // @include media('>=sm') {
+  padding: calc(2rem + #{$fs * 1.25}) $u*2;
+  // }
 
   &__item,
   &__sizer {
