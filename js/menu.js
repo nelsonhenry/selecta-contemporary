@@ -7,27 +7,30 @@
     header = document.querySelector('#header'),
     canvas = document.querySelector('#canvas'),
     navLinks = document.querySelectorAll('#menu .nav__link'),
-    menuWidth = menu.offsetWidth;
+    menuWidth = menu.offsetWidth,
+    w = window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
 
-  menu.style.right = -menuWidth + 'px';
+  menu.style.left = '100%';
 
   function openMenu() {
+    canvas.style.left = -menuWidth + 'px';
+    menu.style.left = (w - menuWidth) + 'px';
     document.body.style.overflow = 'hidden';
-    canvas.style.right = menuWidth + 'px';
     canvas.style.pointerEvents = 'none';
     closeMenuZone.style.pointerEvents = 'all';
     header.style.opacity = 0;
-    menu.style.right = 0;
     menu.classList.add('menu--open');
   }
 
   function closeMenu() {
+    canvas.style.left = 0;
+    menu.style.left = w + 'px';
     document.body.style.overflow = '';
-    canvas.style.right = 0;
     canvas.style.pointerEvents = '';
     closeMenuZone.style.pointerEvents = '';
     header.style.opacity = '';
-    menu.style.right = -menuWidth + 'px';
     menu.classList.remove('menu--open');
   }
 

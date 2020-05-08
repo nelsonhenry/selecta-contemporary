@@ -5,8 +5,8 @@
 
 .canvas {
   position: relative;
-  transition: right $speed ease-out;
-  right: 0;
+  transition: left $speed ease-out;
+  left: 0;
 }
 
 .btn-icon {
@@ -27,7 +27,7 @@
 
     &--open-search {
       position: relative;
-      transform: translateY(15%) rotate(-45deg);
+      transform: rotate(-45deg);
       margin-right: 0.25rem;
     }
 
