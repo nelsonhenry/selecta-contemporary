@@ -20,8 +20,11 @@ ol {
   list-style: none;
 }
 
-a {
+*,
+*:focus,
+*:active {
   outline: none;
+  box-shadow: none;
 }
 
 button {
