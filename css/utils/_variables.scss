@@ -27,30 +27,11 @@ $breakpoints: (xs: 480px,
   }
 }
 
-.pad {
-  padding-top: 1rem;
-  padding-left: $u;
-  padding-right: $u;
-  padding-bottom: 1rem;
-
-  @include media('>=sm') {
-    padding-top: 1rem;
-    padding-left: $u/2;
-    padding-right: $u/2;
-    padding-bottom: 1rem;
-  }
-}
-
 .ts-title {
   font-size: $fs * 2;
   line-height: 1.25;
 
-  @include media('>=xs') {
-    font-size: $fs * 2.5;
-    line-height: 1.1875;
-  }
-
-  @include media('>=sm') {
+  @include media('>=md') {
     font-size: $fs * 3;
     line-height: 1.125;
   }
