@@ -9,11 +9,13 @@
   display: flex;
   justify-content: space-between;
   color: $fg;
-  transition: $speed ease-in;
-  transition-property: opacity color;
+  background: $bg;
+  // transition: $speed ease-in;
+  // transition-property: opacity color;
 
   &--hero {
     color: $bg;
+    background: none;
     transition: none;
   }
 
