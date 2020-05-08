@@ -66,7 +66,7 @@
 
   // hero min-height
   function heroMinhHeight() {
-    hero.style.minHeight = h + 'px';
+    hero.style.height = h + 'px';
   }
 
   heroMinhHeight();
