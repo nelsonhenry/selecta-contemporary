@@ -1,7 +1,6 @@
 .main {
   background: $bg;
-  transition: $speed ease-in;
-  transition-property: background;
+  transition: background $speed ease-in;
 }
 
 .canvas {

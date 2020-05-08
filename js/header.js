@@ -4,74 +4,62 @@
     header = document.querySelector('#header'),
     h = window.innerHeight ||
     document.documentElement.clientHeight ||
-    document.body.clientHeight,
-    hHeader = h - header.offsetHeight / 2;
+    document.body.clientHeight;
 
 
   // add/rm class hero (scroll)
-  let headerHero = throttle(() => {
-    document.body.classList.contains('home') && window.pageYOffset > hHeader ?
-      header.classList.remove('header--hero') :
-      header.classList.add('header--hero');
-  }, 100);
-
-
-  function headerFollow() {
-    let
-      elHeight = 0,
-      elTop = 0,
-      scroll = 0,
-      prevScroll = 0,
-      diffScroll = 0;
-
-    header.style.top = 0;
-
-    window.addEventListener('scroll', () => {
-      elHeight = header.offsetHeight;
-      scroll = window.pageYOffset;
-      diffScroll = prevScroll - scroll;
-      elTop = parseInt(header.style.top) + diffScroll;
-
-      if (scroll <= 0) {
-        header.style.top = 0;
-      } else if (diffScroll > 0) {
-        header.style.top = elTop > 0 ? 0 : elTop + 'px';
-      } else {
-        header.style.top = Math.abs(elTop) > elHeight ? -elHeight + 'px' : elTop + 'px';
-      }
-      prevScroll = scroll;
-    });
+  function headerHero() {
+    document.body.classList.contains('home') && window.pageYOffset < h ?
+      header.classList.add('header--hero') :
+      header.classList.remove('header--hero');
   }
-
-  headerFollow();
 
   // add class hero
   if (document.body.classList.contains('home') && window.pageYOffset < h)
     header.classList.add('header--hero');
 
-  <<
-  << << < HEAD
-  window.addEventListener("scroll", headerHero);
-
-  // // scroll (throttle)
-  // let lastScrollPosition = 0,
-  //   tick = false;
-  ===
-  === =
-
   // scroll (throttle)
-  let lastScrollPosition = 0,
-    tick = false; >>>
-  >>> > master
+  let tick = false;
+  window.addEventListener('scroll', () => {
+    let scroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (!tick)
+      setTimeout(() => {
+        if (document.body.classList.contains('home'))
+          headerHero();
+        tick = false;
+      }, 100)
+    tick = true;
+  }, false);
 
-  // window.addEventListener('scroll', () => {
-  //   lastScrollPosition = window.scrollY;
-  //   if (!tick)
-  //     setTimeout(() => {
-  //       if (document.body.classList.contains('home'))
-  //         headerHero();
-  //       tick = false;
-  //     }, 100)
-  //   tick = true;
-  // });
-})()
+  let scrollPos = 0;
+  const nav = document.querySelector('.site-nav');
+
+  function checkPosition() {
+    let windowY = window.scrollY;
+    if (windowY < scrollPos) {
+      header.style.top = '0';
+    } else {
+      header.style.top = -(header.offsetHeight) + 'px';
+    }
+    scrollPos = windowY;
+  }
+
+  // function debounce(func, wait = 100, immediate = true) {
+  //   let timeout;
+  //   return function () {
+  //     let context = this,
+  //       args = arguments;
+  //     let later = function () {
+  //       timeout = null;
+  //       if (!immediate) func.apply(context, args);
+  //     };
+  //     let callNow = immediate && !timeout;
+  //     clearTimeout(timeout);
+  //     timeout = setTimeout(later, wait);
+  //     if (callNow) func.apply(context, args);
+  //   };
+  // };
+
+  window.addEventListener('scroll', checkPosition);
+
+})();

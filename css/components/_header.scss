@@ -11,7 +11,7 @@
   color: $fg;
   background: $bg;
   transition: $speed ease-in;
-  transition-property: opacity color;
+  transition-property: opacity color top;
 
   &--hero {
     color: $bg;

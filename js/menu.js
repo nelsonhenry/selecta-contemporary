@@ -1,6 +1,5 @@
 (() => {
   let
-    body = document.querySelector('body'),
     menu = document.querySelector('#menu'),
     closeMenuZone = document.querySelector('#close-menu-zone'),
     btnOpenMenu = document.querySelector('#btn--open-menu'),
@@ -10,12 +9,10 @@
     navLinks = document.querySelectorAll('#menu .nav__link'),
     menuWidth = menu.offsetWidth;
 
-  function resizeMenu() {
-    menu.style.right = -menuWidth + 'px';
-  }
+  menu.style.right = -menuWidth + 'px';
 
   function openMenu() {
-    body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
     canvas.style.right = menuWidth + 'px';
     canvas.style.pointerEvents = 'none';
     closeMenuZone.style.pointerEvents = 'all';
@@ -25,7 +22,7 @@
   }
 
   function closeMenu() {
-    body.style.overflow = '';
+    document.body.style.overflow = '';
     canvas.style.right = 0;
     canvas.style.pointerEvents = '';
     closeMenuZone.style.pointerEvents = '';
@@ -33,8 +30,6 @@
     menu.style.right = -menuWidth + 'px';
     menu.classList.remove('menu--open');
   }
-
-  resizeMenu();
 
   btnOpenMenu.addEventListener('click', () => openMenu());
   btnCloseMenu.addEventListener('click', () => closeMenu());
