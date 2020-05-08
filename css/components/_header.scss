@@ -1,6 +1,5 @@
 .header {
   @extend .pad;
-  // pointer-events: none;
   z-index: 1;
   position: fixed;
   top: 0;
@@ -15,9 +14,4 @@
     color: $bg;
     background: none;
   }
-
-  // &__title,
-  // &__nav {
-  //   pointer-events: all;
-  // }
 }
