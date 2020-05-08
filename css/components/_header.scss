@@ -1,6 +1,6 @@
 .header {
   @extend .pad;
-  pointer-events: none;
+  // pointer-events: none;
   z-index: 1;
   position: fixed;
   top: 0;
@@ -16,8 +16,8 @@
     background: none;
   }
 
-  &__title,
-  &__nav {
-    pointer-events: all;
-  }
+  // &__title,
+  // &__nav {
+  //   pointer-events: all;
+  // }
 }
