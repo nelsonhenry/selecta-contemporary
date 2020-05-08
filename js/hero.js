@@ -18,7 +18,8 @@
     document.documentElement.clientHeight ||
     document.body.clientHeight,
     throttled = false,
-    cachedWidth = w;
+    cachedWidth = w,
+    isTouch = supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
   // init
   let flktyHero = new Flickity((sliderEl), {
@@ -81,8 +82,10 @@
       resizeSliderText();
       let newWidth = w;
       if (newWidth !== cachedWidth) {
-        sliderViewport.style.height = '';
-        flktyHero.resize();
+        if (!isTouch) {
+          sliderViewport.style.height = '';
+          flktyHero.resize();
+        }
         cachedWidth = newWidth;
       }
       throttled = true;
