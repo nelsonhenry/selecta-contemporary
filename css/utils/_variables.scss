@@ -35,10 +35,6 @@ $breakpoints: (xs: 480px,
     font-size: $fs * 3;
     line-height: 1.125;
   }
-
-  @include media('>=xl') {
-    font-size: $fs * 4;
-  }
 }
 
 .ts-subtitle {

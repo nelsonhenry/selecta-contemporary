@@ -1,11 +1,11 @@
 .grid {
   width: 100%;
   overflow-x: hidden;
+  padding: calc(2rem + #{$fs * 1.25}) $u;
 
-  // padding: 2rem $u;
-  // @include media('>=sm') {
-  padding: calc(2rem + #{$fs * 1.25}) $u*2;
-  // }
+  @include media('>=sm') {
+    padding: calc(2rem + #{$fs * 1.25}) $u*2;
+  }
 
   &__item,
   &__sizer {
@@ -77,7 +77,7 @@
       text-align: center;
     }
 
-    &__exhibition {
+    &__name {
       @extend .ts-italic;
     }
   }

@@ -10,13 +10,10 @@
   justify-content: space-between;
   color: $fg;
   background: $bg;
-  transition: $speed ease-in;
-  transition-property: opacity color top;
 
   &--hero {
     color: $bg;
     background: none;
-    transition: none;
   }
 
   &__title,
