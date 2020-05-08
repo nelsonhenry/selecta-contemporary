@@ -30,6 +30,8 @@
     lazyLoad: 1,
     groupCells: true,
     wrapAround: true,
+    selectedAttraction: 0.2,
+    dragThreshold: 10, // dragging doesn't start until 10px moved
     on: {
       ready() {
         setTimeout(() => {
