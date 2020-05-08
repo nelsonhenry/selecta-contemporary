@@ -30,7 +30,7 @@
     lazyLoad: 1,
     groupCells: true,
     wrapAround: true,
-    dragThreshold: 10, // dragging doesn't start until 10px moved
+    dragThreshold: 8, // dragging doesn't start until 10px moved
     selectedAttraction: 0.025,
     friction: 0.28,
     on: {
