@@ -32,7 +32,7 @@
     &:nth-of-type(4n):not(&--double) {
       .block {
         // margin-left: $u*3;
-        margin-right: $u*3;
+        // margin-right: $u*3;
 
         @include media('>=sm') {
           margin-left: 0;
@@ -44,7 +44,7 @@
     &:nth-of-type(4n+1):not(&--double),
     &:nth-of-type(4n+2):not(&--double) {
       .block {
-        margin-left: $u*3;
+        // margin-left: $u*3;
         // margin-right: $u*3;
 
         @include media('>=sm') {
