@@ -28,7 +28,11 @@ $breakpoints: (xs: 480px,
 }
 
 .ts-title {
-  font-size: $fs * 2;
+  font-size: $fs * 1.5;
+
+  @include media('>=xs') {
+    font-size: $fs * 2;
+  }
 
   @include media('>=md') {
     font-size: $fs * 3;
