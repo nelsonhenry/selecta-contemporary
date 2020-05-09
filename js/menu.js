@@ -6,15 +6,15 @@
     btnCloseMenu = document.querySelector('#btn--close-menu'),
     header = document.querySelector('#header'),
     canvas = document.querySelector('#canvas'),
-    navLinks = document.querySelectorAll('#menu .nav__link'),
-    menuWidth = menu.offsetWidth,
-    w = window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth;
+    navLinks = document.querySelectorAll('#menu .nav__link');
 
   menu.style.left = '100%';
 
   function openMenu() {
+    let w = window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth,
+      menuWidth = menu.offsetWidth;
     canvas.style.left = -menuWidth + 'px';
     menu.style.left = (w - menuWidth) + 'px';
     document.body.style.overflow = 'hidden';
@@ -25,6 +25,10 @@
   }
 
   function closeMenu() {
+    let w = window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth,
+      menuWidth = menu.offsetWidth;
     canvas.style.left = 0;
     menu.style.left = w + 'px';
     document.body.style.overflow = '';
@@ -35,6 +39,10 @@
   }
 
   function resizeMenu() {
+    let w = window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth,
+      menuWidth = menu.offsetWidth;
     menu.style.left = w + 'px';
   }
 
@@ -46,11 +54,6 @@
   })
 
   window.addEventListener('resize', function () {
-    w = window.innerWidth ||
-      document.documentElement.clientWidth ||
-      document.body.clientWidth;
-    menuWidth = menu.offsetWidth;
-    console.log(menuWidth);
     menu.classList.contains('menu--open') ?
       closeMenu() :
       resizeMenu()
