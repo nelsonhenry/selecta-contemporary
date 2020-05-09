@@ -10,6 +10,7 @@
 }
 
 .btn-icon {
+
   &__text {
     @extend .ts-link;
     display: none;
@@ -20,6 +21,7 @@
   }
 
   &__icon {
+    font-family: monospace;
     display: inline-block;
 
     @include media('>=xs') {
