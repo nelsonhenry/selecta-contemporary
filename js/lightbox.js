@@ -40,12 +40,19 @@
           <div class="lightbox__nav">
             <button class="btn-icon btn-icon--left" id="btn--lightbox-infos">
               <span class="btn-icon__text">Infos</span>
-              <span class="btn-icon__icon">&#9432;</span>
+              <svg class="btn-icon__icon btn-icon__icon--svg">
+                <circle cx="9" cy="9" r="8.5"></circle>
+                <circle cx="9" cy="5" r="0.375"></circle>
+                <line x1="9" y1="8" x2="9" y2="14"></line>
+              </svg>
             </button>
             &nbsp;/&nbsp;
             <button class="btn-icon btn-icon--right" id="btn--lightbox-close" data-fancybox-close>
               <span class="btn-icon__text">Close</span>
-              <span class="btn-icon__icon">✕</span>
+              <svg class="btn-icon__icon btn-icon__icon--svg">
+                <line x1="2" y1="2" x2="16" y2="16"></line>
+                <line x1="16" y1="2" x2="2" y2="16"></line>
+              </svg>
             </button>
           </div>
         </div>

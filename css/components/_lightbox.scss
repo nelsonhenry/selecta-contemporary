@@ -46,5 +46,10 @@
     pointer-events: all;
     display: flex;
     align-items: center;
+
+    .btn-icon__icon--svg {
+      stroke: $bg;
+    }
   }
+
 }
