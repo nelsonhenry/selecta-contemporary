@@ -52,3 +52,37 @@ canvas {
   visibility: hidden;
   top: 0;
 }
+
+.menu-vertical {
+  z-index: 10;
+  // background-color: red;
+  position: fixed;
+  padding: 1rem;
+  height: 100vh;
+  width: $u*2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  writing-mode: vertical-rl;
+  left: 0;
+
+  .title {
+    transform: rotate(180deg);
+  }
+}
+
+.menu-vertical-right {
+  z-index: 10;
+  // background-color: red;
+  position: fixed;
+  padding: 1rem;
+  height: 100vh;
+  width: $u*2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  writing-mode: vertical-rl;
+  right: 0;
+}

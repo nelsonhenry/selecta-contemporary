@@ -31,8 +31,8 @@
     &:nth-of-type(4n+3):not(&--double),
     &:nth-of-type(4n):not(&--double) {
       .block {
-        margin-left: $u;
-        margin-right: $u;
+        // margin-left: $u*3;
+        margin-right: $u*3;
 
         @include media('>=sm') {
           margin-left: 0;
@@ -44,8 +44,8 @@
     &:nth-of-type(4n+1):not(&--double),
     &:nth-of-type(4n+2):not(&--double) {
       .block {
-        margin-left: $u;
-        margin-right: $u;
+        margin-left: $u*3;
+        // margin-right: $u*3;
 
         @include media('>=sm') {
           margin-left: $u*3;
@@ -81,5 +81,13 @@
     &__name {
       @extend .ts-italic;
     }
+
+    // &__date {
+    //   font-size: 1rem;
+    //   display: inline-block;
+    //   padding: 0.25rem 0.5rem;
+    //   margin-bottom: 0.5rem;
+    //   border: 1px solid #000;
+    // }
   }
 }
