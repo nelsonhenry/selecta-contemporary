@@ -29,7 +29,7 @@
   }
 
   &__icon {
-    font-family: monospace;
+    font-family: 'Segoe UI Symbol';
     display: inline-block;
 
     @include media('>=xs') {
