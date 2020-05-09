@@ -50,6 +50,7 @@
       document.documentElement.clientWidth ||
       document.body.clientWidth;
     menuWidth = menu.offsetWidth;
+    console.log(menuWidth);
     menu.classList.contains('menu--open') ?
       closeMenu() :
       resizeMenu()

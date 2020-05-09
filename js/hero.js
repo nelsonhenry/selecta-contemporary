@@ -30,9 +30,7 @@
     lazyLoad: 1,
     groupCells: true,
     wrapAround: true,
-    dragThreshold: 5, // dragging doesn't start until 10px moved
-    // selectedAttraction: 0.025,
-    // friction: 0.28,
+    dragThreshold: 5,
     on: {
       ready() {
         setTimeout(() => {
@@ -68,11 +66,11 @@
   }
 
   // hero min-height
-  function heroMinhHeight() {
-    hero.style.height = h + 'px';
-  }
+  // function heroMinhHeight() {
+  //   hero.style.height = h + 'px';
+  // }
 
-  heroMinhHeight();
+  // heroMinhHeight();
   resizeSliderText();
 
   // custom nav
@@ -81,19 +79,24 @@
 
   // resize
   window.addEventListener('resize', () => {
-    if (!throttled) {
-      resizeSliderText();
-      let newWidth = w;
-      if (newWidth !== cachedWidth) {
-        if (!isTouch) {
-          sliderViewport.style.height = '';
-          flktyHero.resize();
-        }
-        cachedWidth = newWidth;
-      }
-      throttled = true;
-      setTimeout(() => throttled = false, 40);
-    }
+    resizeSliderText();
+    // sliderViewport.style.height = '';
+    // flktyHero.resize();
+    // console.log(h);
+
+    // if (!throttled) {
+    //   resizeSliderText();
+    //   let newWidth = w;
+    //   if (newWidth !== cachedWidth) {
+    //     if (!isTouch) {
+    //       sliderViewport.style.height = '';
+    //       flktyHero.resize();
+    //     }
+    //     cachedWidth = newWidth;
+    //   }
+    //   throttled = true;
+    //   setTimeout(() => throttled = false, 40);
+    // }
   });
 
   // Fix page vertical scrolling (mobile)
