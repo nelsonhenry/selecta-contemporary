@@ -11,6 +11,10 @@
   transition: left $speed ease-out;
   max-width: 100vw;
 
+  .btn-icon__icon--svg {
+    stroke: $bg;
+  }
+
   .nav {
     @extend .pad;
     padding-top: 4rem;

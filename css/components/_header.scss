@@ -12,6 +12,10 @@
   &--hero {
     color: $bg;
     background: none;
+
+    .btn-icon__icon--svg {
+      stroke: $bg;
+    }
   }
 
   &__nav {

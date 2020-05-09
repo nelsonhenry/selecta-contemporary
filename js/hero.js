@@ -66,11 +66,11 @@
   }
 
   // hero min-height
-  // function heroMinhHeight() {
-  //   hero.style.height = h + 'px';
-  // }
+  function heroHeight() {
+    hero.style.height = h + 'px';
+  }
 
-  // heroMinhHeight();
+  heroHeight();
   resizeSliderText();
 
   // custom nav

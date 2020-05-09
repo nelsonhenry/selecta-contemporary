@@ -29,31 +29,20 @@
   }
 
   &__icon {
-    display: inline-block;
+    display: block;
 
     @include media('>=xs') {
       display: none;
     }
 
-    &--search {
-      &:before {
-        content: '\26B2';
-        display: inline-block;
-        position: relative;
-        transform: rotate(-45deg);
-      }
-    }
-
-    &--menu {
-      &:before {
-        content: '\2630';
-      }
-    }
-
-    &--close {
-      &:before {
-        content: '\2715';
-      }
+    &--svg {
+      margin-top: $fs * 0.125;
+      margin-bottom: $fs * 0.125;
+      height: $fs;
+      width: $fs;
+      fill: none;
+      stroke: $fg;
+      stroke-width: 1.25;
     }
   }
 }
