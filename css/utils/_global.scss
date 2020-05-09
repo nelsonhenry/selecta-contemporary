@@ -29,26 +29,31 @@
   }
 
   &__icon {
-    font-family: 'Segoe UI Symbol';
     display: inline-block;
 
     @include media('>=xs') {
       display: none;
     }
 
-    &--open-search {
-      position: relative;
-      transform: rotate(-45deg);
-      margin-right: 0.25rem;
+    &--search {
+      &:before {
+        content: '\26B2';
+        display: inline-block;
+        position: relative;
+        transform: rotate(-45deg);
+      }
     }
 
-    &--submit-search {
-      position: relative;
-      transform: rotate(-45deg);
+    &--menu {
+      &:before {
+        content: '\2630';
+      }
     }
 
-    &--open-menu {
-      margin-left: 0.25rem;
+    &--close {
+      &:before {
+        content: '\2715';
+      }
     }
   }
 }
