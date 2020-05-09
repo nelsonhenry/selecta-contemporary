@@ -29,21 +29,21 @@
       <div class="fancybox-inner">
         <div class="lightbox__header">
           <div class="lightbox__nav">
-            <button data-fancybox-prev title="prev"><</button>
+            <button class="btn-icon btn-icon--left" data-fancybox-prev title="prev">&lt;</button>
             &nbsp;
             <span data-fancybox-index></span>
             &nbsp;/&nbsp;
             <span data-fancybox-count></span>
             &nbsp;
-            <button data-fancybox-next title="next">></button>
+            <button class="btn-icon  btn-icon--right" data-fancybox-next title="next">&gt;</button>
           </div>
           <div class="lightbox__nav">
-            <button class="btn-icon" id="btn--lightbox-infos">
+            <button class="btn-icon btn-icon--left" id="btn--lightbox-infos">
               <span class="btn-icon__text">Infos</span>
               <span class="btn-icon__icon">&#9432;</span>
             </button>
             &nbsp;/&nbsp;
-            <button class="btn-icon" id="btn--lightbox-close" data-fancybox-close>
+            <button class="btn-icon btn-icon--right" id="btn--lightbox-close" data-fancybox-close>
               <span class="btn-icon__text">Close</span>
               <span class="btn-icon__icon">✕</span>
             </button>

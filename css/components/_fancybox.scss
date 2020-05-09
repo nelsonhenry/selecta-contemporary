@@ -43,7 +43,8 @@
   }
 
   &__nav {
-    @extend .pad;
     pointer-events: all;
+    display: flex;
+    align-items: center;
   }
 }

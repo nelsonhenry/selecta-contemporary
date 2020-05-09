@@ -24,11 +24,12 @@
   }
 
   .slider__nav {
-    @extend .pad;
+    display: flex;
+    align-items: center;
     position: absolute;
     bottom: 0;
     left: 0;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     @extend .ts-subtitle;
 
     @include media('>=sm') {

@@ -10,9 +10,17 @@
 }
 
 .btn-icon {
+  @extend .pad;
+
+  &--left {
+    padding-right: 0.5rem;
+  }
+
+  &--right {
+    padding-left: 0.5rem;
+  }
 
   &__text {
-    @extend .ts-link;
     display: none;
 
     @include media('>=xs') {

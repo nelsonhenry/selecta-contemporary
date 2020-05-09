@@ -1,5 +1,4 @@
 .header {
-  @extend .pad;
   z-index: 1;
   position: fixed;
   top: 0;
@@ -10,12 +9,17 @@
   color: $fg;
   background: $bg;
 
-  &__title {
-    @extend .ts-link;
-  }
-
   &--hero {
     color: $bg;
     background: none;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    @extend .pad;
   }
 }

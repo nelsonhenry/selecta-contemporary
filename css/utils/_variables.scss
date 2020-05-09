@@ -82,16 +82,16 @@ $breakpoints: (xs: 480px,
   font-style: italic;
 }
 
-.ts-link {
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  transition: $speed/2 ease-in;
-  transition-property: text-decoration-color;
+// .ts-link {
+//   text-decoration: underline;
+//   text-decoration-color: transparent;
+//   transition: $speed/2 ease-in;
+//   transition-property: text-decoration-color;
 
-  &:hover {
-    text-decoration-color: inherit;
-  }
-}
+//   &:hover {
+//     text-decoration-color: inherit;
+//   }
+// }
 
 .ts-bodylink {
   text-decoration: underline;

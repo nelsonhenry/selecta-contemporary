@@ -4,15 +4,22 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba($bg, 0.5);
   z-index: 2;
   opacity: 0;
-  pointer-events: none;
   transition: $speed ease-in;
   transition-property: opacity;
+  pointer-events: none;
+
+  &__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($bg, 0.5);
+  }
 
   &__btn {
-    @extend .pad;
     position: absolute;
     top: 0;
     right: 0;

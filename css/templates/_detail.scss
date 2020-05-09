@@ -5,7 +5,7 @@
 
   .article {
     @extend .pad;
-    padding-top: 6rem;
+    padding-top: 4rem;
     padding-bottom: 1rem;
 
     &__header {
@@ -16,7 +16,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-bottom: 6rem;
+      margin-bottom: 4rem;
     }
 
     &__title {

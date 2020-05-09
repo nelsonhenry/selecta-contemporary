@@ -53,6 +53,7 @@
   </section>
   <div id="close-menu-zone" class="close-menu-zone"></div>
   <section class="searchbox" id="searchbox">
+    <div class="searchbox__bg"></div>
     <div class="searchbox__btn">
       <button class="btn-icon" id="btn--close-search">
         <span class="btn-icon__text">Close</span>
@@ -75,16 +76,14 @@
   </section>
   <div class="canvas" id="canvas">
     <header class="header" id="header">
-      <div class="header__title">
-        <h1><a href="index.html">Selecta contemporary</a></h1>
-      </div>
+      <h1 class="header__title"><a href="index.html">Selecta contemporary</a></h1>
       <nav class="header__nav">
-        <button class="nav__link btn-icon" id="btn--open-search">
+        <button class="nav__link btn-icon btn-icon--left" id="btn--open-search">
           <span class="btn-icon__text">Search</span>
           <span class="btn-icon__icon btn-icon__icon--open-search">⚲</span>
         </button>
         &nbsp;/&nbsp;
-        <button class="nav__link btn-icon" id="btn--open-menu">
+        <button class="nav__link btn-icon btn-icon--right" id="btn--open-menu">
           <span class="btn-icon__text">Menu</span>
           <span class="btn-icon__icon btn-icon__icon--open-menu">☰</span>
         </button>
@@ -167,10 +166,10 @@
         </div>
       </div>
       <div class="slider__nav">
-        <button class="slider__arrow slider__arrow--prev">&lt;</button>&nbsp;
+        <button class="btn-icon btn-icon--left slider__arrow slider__arrow--prev">&lt;</button>&nbsp;
         <span class="slider__page-active"></span>&nbsp;/&nbsp;
         <span class="slider__page-count"></span>&nbsp;
-        <button class="slider__arrow slider__arrow--next">&gt;</button>
+        <button class="btn-icon btn-icon--right slider__arrow slider__arrow--next">&gt;</button>
       </div>
     </section>
     <main class="main" id="main">

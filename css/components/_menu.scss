@@ -11,40 +11,30 @@
   transition: left $speed ease-out;
   max-width: 100vw;
 
-  &__inner {
+  .nav {
     @extend .pad;
+    padding-top: 4rem;
     padding-bottom: 2rem;
     padding-left: $u*2;
 
     @include media('>=sm') {
       padding-left: $u;
     }
-  }
 
-  .nav {
     &__list {
       &--primary {
         @extend .ts-title;
-        margin-top: 4rem;
-
-        &:not(:last-child) {
-          margin-bottom: 2rem;
-        }
+        margin-bottom: 2rem;
       }
 
       &--secondary {
         @extend .ts-subtitle;
       }
     }
-
-    &__link {
-      @extend .ts-link;
-    }
   }
 }
 
 .close-menu-zone {
-  cursor: pointer;
   pointer-events: none;
   position: fixed;
   z-index: 1;
