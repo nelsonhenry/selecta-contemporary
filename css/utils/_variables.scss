@@ -29,7 +29,6 @@ $breakpoints: (xs: 480px,
 
 .ts-title {
   font-size: $fs * 2;
-  line-height: 1.25;
 
   @include media('>=md') {
     font-size: $fs * 3;
@@ -39,13 +38,31 @@ $breakpoints: (xs: 480px,
 
 .ts-subtitle {
   font-size: $fs * 1;
-  line-height: 1.5;
 
-  @include media('>=md') {
+  @include media('>=sm') {
     font-size: $fs * 1.5;
-    line-height: 1.25;
   }
 }
+
+// .ts-title {
+//   font-size: $fs * 2;
+//   line-height: 1.25;
+
+//   @include media('>=md') {
+//     font-size: $fs * 3;
+//     line-height: 1.125;
+//   }
+// }
+
+// .ts-subtitle {
+//   font-size: $fs * 1;
+//   line-height: 1.5;
+
+//   @include media('>=md') {
+//     font-size: $fs * 1.5;
+//     line-height: 1.25;
+//   }
+// }
 
 .ts-body {
   font-size: $fs * 0.875;
@@ -63,6 +80,17 @@ $breakpoints: (xs: 480px,
 
 .ts-italic {
   font-style: italic;
+}
+
+.ts-link {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: $speed/2 ease-in;
+  transition-property: text-decoration-color;
+
+  &:hover {
+    text-decoration-color: inherit;
+  }
 }
 
 .ts-bodylink {
@@ -144,5 +172,4 @@ $breakpoints: (xs: 480px,
   a {
     @extend .ts-bodylink;
   }
-
 }

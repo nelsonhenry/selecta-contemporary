@@ -17,11 +17,11 @@
 @import 'templates/detail';
 
 html {
-  font-size: 16px;
+  // font-size: 16px;
 
-  @include media('>=xs') {
-    font-size: 18px;
-  }
+  // @include media('>=xs') {
+  font-size: 18px;
+  // }
 
   @include media('>=md') {
     font-size: 20px;

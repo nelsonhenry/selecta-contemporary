@@ -11,6 +11,7 @@
 
 .btn-icon {
   &__text {
+    @extend .ts-link;
     display: none;
 
     @include media('>=xs') {

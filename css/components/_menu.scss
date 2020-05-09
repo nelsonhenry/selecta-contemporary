@@ -25,7 +25,7 @@
     &__list {
       &--primary {
         @extend .ts-title;
-        margin-top: 5rem;
+        margin-top: 4rem;
 
         &:not(:last-child) {
           margin-bottom: 2rem;
@@ -35,6 +35,10 @@
       &--secondary {
         @extend .ts-subtitle;
       }
+    }
+
+    &__link {
+      @extend .ts-link;
     }
   }
 }
