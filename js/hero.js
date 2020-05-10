@@ -80,26 +80,9 @@
   // resize
   window.addEventListener('resize', () => {
     resizeSliderText();
-    // sliderViewport.style.height = '';
-    // flktyHero.resize();
-    // console.log(h);
-
-    // if (!throttled) {
-    //   resizeSliderText();
-    //   let newWidth = w;
-    //   if (newWidth !== cachedWidth) {
-    //     if (!isTouch) {
-    //       sliderViewport.style.height = '';
-    //       flktyHero.resize();
-    //     }
-    //     cachedWidth = newWidth;
-    //   }
-    //   throttled = true;
-    //   setTimeout(() => throttled = false, 40);
-    // }
   });
 
-  // Fix page vertical scrolling (mobile)
+  // Fix page vertical scrolling (firefox mobile)
   let
     tapArea = document.querySelectorAll('.flickity-enabled'),
     startX = 0;
