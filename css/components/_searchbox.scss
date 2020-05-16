@@ -46,7 +46,6 @@
   &__submit button {
     @extend .pad;
     height: 100%;
-    border-bottom: 1px solid $fg;
   }
 
   &__input {
