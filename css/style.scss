@@ -12,9 +12,11 @@
 @import 'components/grid';
 @import 'components/searchbox';
 @import 'components/lightbox';
+@import 'components/footer';
 
 @import 'templates/home';
 @import 'templates/detail';
+@import 'templates/submissions';
 
 html {
   // font-size: 16px;

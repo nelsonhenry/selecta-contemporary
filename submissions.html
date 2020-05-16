@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selecta V2</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="detail">
+  <!-- <body class="detail detail--dark"> -->
+  <section class="menu" id="menu">
+    <div class="menu__inner">
+      <button class="btn-icon" id="btn--close-menu">
+        <span class="btn-icon__text">Close</span>
+        <svg class="btn-icon__icon btn-icon__icon--svg">
+          <line x1="2" y1="2" x2="16" y2="16"></line>
+          <line x1="16" y1="2" x2="2" y2="16"></line>
+        </svg>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list nav__list--primary">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html">Exhibitions</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="about.html">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="submissions.html">Submissions</a>
+          </li>
+          <li class="nav__item">
+            <button class="nav__link" id="btn--menu-open-search">Search</button>
+          </li>
+        </ul>
+        <ul class="nav__list nav__list--secondary">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Instagram</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Facebook</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Credits</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Privacy policy</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">V 20.05.09 20:31</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <div id="close-menu-zone" class="close-menu-zone"></div>
+  <section class="searchbox" id="searchbox">
+    <div class="searchbox__bg"></div>
+    <div class="searchbox__btn">
+      <button class="btn-icon" id="btn--close-search">
+        <span class="btn-icon__text">Close</span>
+        <svg class="btn-icon__icon btn-icon__icon--svg">
+          <line x1="2" y1="2" x2="16" y2="16"></line>
+          <line x1="16" y1="2" x2="2" y2="16"></line>
+        </svg>
+      </button>
+    </div>
+    <form action="#" class="searchbox__form">
+      <div class="searchbox__form-inner">
+        <div class="searchbox__input">
+          <input type="text">
+        </div>
+        <div class="searchbox__submit">
+          <button class="btn-icon" id="btn--submit-search" type="submit">
+            <span class="btn-icon__text">Search</span>
+            <svg class="btn-icon__icon btn-icon__icon--svg">
+              <circle cx="8" cy="8" r="5"></circle>
+              <line x1="12" y1="12" x2="19" y2="19"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </form>
+  </section>
+  <div class="canvas" id="canvas">
+    <header class="header" id="header">
+      <h1 class="header__title"><a href="index.html">Selecta contemporary</a></h1>
+      <nav class="header__nav">
+        <button class="nav__link btn-icon btn-icon--left" id="btn--open-search">
+          <span class="btn-icon__text">Search</span>
+          <svg class="btn-icon__icon btn-icon__icon--svg">
+            <circle cx="8" cy="8" r="5"></circle>
+            <line x1="12" y1="12" x2="19" y2="19"></line>
+          </svg>
+        </button>
+        &nbsp;/&nbsp;
+        <button class="nav__link btn-icon btn-icon--right" id="btn--open-menu">
+          <span class="btn-icon__text">Menu</span>
+          <svg class="btn-icon__icon btn-icon__icon--svg">
+            <line x1="0" y1="5" x2="20" y2="5"></line>
+            <line x1="0" y1="10" x2="20" y2="10"></line>
+            <line x1="0" y1="15" x2="20" y2="15"></line>
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <main class="main" id="main">
+      <form action="#" class="form">
+        <div class="form__header">
+          <div class="form__title">
+            If you wish to submit an exhibition, event or look book, please find the fill out form below. Please make
+            sure to fill out completely the guidelines in order for us to ensure the correct publishment of your
+            submissions. Thank you !
+          </div>
+        </div>
+        <div class="form__grid">
+          <label class="label">
+            <div class="label__title">Exhibition name</div>
+            <div class="label__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam earum
+              perspiciatis autem debitis necessitatibus veritatis, assumenda aut quibusdam mollitia totam culpa facere
+              officia, odio consequatur rerum neque atque itaque tenetur.</div>
+            <input class="label__input" type="text" />
+          </label>
+          <label class="label">
+            <div class="label__title">Exhibition name</div>
+            <input class="label__input" type="text" />
+          </label>
+          <label class="label">
+            <div class="label__title">Exhibition name</div>
+            <input class="label__input" type="text" />
+          </label>
+          <label class="label label--half">
+            <div class="label__title">Exhibition name</div>
+            <input class="label__input" type="text" />
+          </label>
+          <label class="label label--half">
+            <div class="label__title">Exhibition name</div>
+            <input class="label__input" type="text" />
+          </label>
+          <label class="label label--half label--date">
+            <div class="label__title">Exhibition name</div>
+            <input class="label__input" type="date" />
+          </label>
+          <label class="label label--half label--date">
+            <div class="label__title">Exhibition name</div>
+            <input class="label__input" type="date" />
+          </label>
+          <label class="label">
+            <div class="label__title">Exhibition name</div>
+            <div class="label__body">
+              <ol>
+                <li>Upload a zip file via WeTransfer and paste the link bellow.</li>
+                <li>Accepted formats: jpg / jpeg / gif / png</li>
+                <li>Minimum image width: 1920 px / Maximum image weight: 2 Mb</li>
+                <li>Rename your images with caption text</li>
+              </ol>
+            </div>
+            <textarea class="label__input" rows="4"></textarea>
+          </label>
+          <label class="label label--checkbox">
+            <input class="label__input" type="checkbox" value="">
+            <div class="label__checkmark"></div>
+            <div class="label__title">I consent to having Selecta collect the submitted names, information and e-mail
+            </div>
+          </label>
+          <button type="submit" class="form__submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.2/autosize.min.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/searchbox.js"></script>
+</body>
+
+</html>

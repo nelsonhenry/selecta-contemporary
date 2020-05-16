@@ -146,9 +146,9 @@ $breakpoints: (xs: 480px,
     word-wrap: break-all;
   }
 
-  li+li {
-    margin-bottom: 0.25rem;
-  }
+  // li+li {
+  //   margin-top: 0.25rem;
+  // }
 
   li>p {
     margin-top: 1rem;

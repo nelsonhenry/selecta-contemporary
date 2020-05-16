@@ -1,0 +1,23 @@
+.footer {
+  padding-bottom: 0.5rem;
+
+  .nav {
+    display: flex;
+
+    &__link {
+      &--prev {
+        margin-right: auto;
+      }
+
+      &--next {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .btn--back-to-top {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

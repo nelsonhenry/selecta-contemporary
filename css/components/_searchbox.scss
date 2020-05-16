@@ -39,13 +39,14 @@
     display: flex;
     justify-content: space-between;
     background: $bg;
-    box-shadow: 0 0 4rem rgba($fg, 0.5);
+    box-shadow: 0 0 4rem rgba($fg, 0.25);
   }
 
   &__input input,
   &__submit button {
     @extend .pad;
     height: 100%;
+    border-bottom: 1px solid $fg;
   }
 
   &__input {

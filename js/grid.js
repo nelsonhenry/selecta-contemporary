@@ -5,7 +5,7 @@
       itemSelector: '.grid__item',
       gutter: '.grid__gutter',
       columnWidth: '.grid__sizer',
-      horizontalOrder: true,
+      // horizontalOrder: true,
       percentPosition: true
     });
     document.addEventListener('lazyloaded', () => msnry.layout());

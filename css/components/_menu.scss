@@ -26,6 +26,8 @@
     }
 
     &__list {
+      list-style: none;
+
       &--primary {
         @extend .ts-title;
         margin-bottom: 2rem;
